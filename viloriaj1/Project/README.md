@@ -1,3 +1,7 @@
+Jeimy and Lasya
+
+
+
 This application would be based on measurements collected using a spectrophotometer, which generates numerical values representing color coordinates. In color science, several color spaces are commonly used, including Hunter Lab, CIE L\*a\*b\*, and XYZ. These color spaces provide structured mathematical models that allow colors to be characterized and analyzed with a high degree of accuracy.
 
 
