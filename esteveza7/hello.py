@@ -24,3 +24,7 @@ d = 12
 product = ((x * y)**u / (u + t) * (y - e)) * d
 print(product)
 
+first_name = "Joseph"
+second_name = "Nikolas"
+print(first_name, second_name)
+print(len(first_name) + len(second_name))
