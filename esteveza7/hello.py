@@ -28,3 +28,11 @@ first_name = "Joseph"
 second_name = "Nikolas"
 print(first_name, second_name)
 print(len(first_name) + len(second_name))
+
+
+b=139
+if b%2==0:
+    print("even")
+else:
+    print("odd")
+  
