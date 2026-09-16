@@ -57,7 +57,7 @@ def s3_1():
 
 
 # ============================================================
-# 3.2  STRING FORMATTING (f-STRINGS)
+# 3.2  STRING FORMATTING (f-pSTRINGS)
 # ============================================================
 # Put f before the quotes, then put expressions inside { }.
 # Each { } is a REPLACEMENT FIELD - it is replaced by the value.
