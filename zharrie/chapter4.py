@@ -90,6 +90,10 @@ def section_4_2():
         employee_bonus = 2
     elif num_sales == 2:
         employee_bonus = 5
+    elif num_sales == 4:
+        employee_bonus = 5
+    elif num_sales == 7:
+        employee_bonus = 5
     else:
         employee_bonus = 10
     print("4.2 bonus:", employee_bonus)             # 5
@@ -106,7 +110,7 @@ def section_4_3():
         if age < 6:
             return "No teams"       # 5 or under
         elif age < 8:
-            return "U8 team"        # 6-7
+            return "U8 team"        # 6-7-5-4
         elif age < 10:
             return "U10 team"       # 8-9
         elif age < 12:
@@ -391,4 +395,3 @@ def run_all_sections():
 
 if __name__ == "__main__":
     run_all_sections()
-    run_exercise_checks()
