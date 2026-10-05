@@ -21,3 +21,8 @@ i=0
 for item in range(len(temperatures)):
     temperatures.append(i)
     print(len(temperatures))
+
+#practice 5 chapt 8
+scores = {"Peter": 45, "Michael": 90, "Cy": 55, "leslie": 76}
+top_two = sorted(scores, key=scores.get, reverse=True)[:2]
+print(f"5. {top_two=}")
