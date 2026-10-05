@@ -287,22 +287,8 @@ def s5_5():
         print(name, "|", end=" ")
     print()
 
-    animals = ["goat", "cat", "lion", "pigeon", "ant", "giraffe", "snake"]
-    print("  random numbers and animals:")
-    for count in range(23):
-        number = random.randint(1, 99)
-        animal = random.choice(animals)
-        print(f"    {number} {animal}")
-
     task("temperatures = [30, 20, 2, -5, -15, -8, -1, 0, 5, 35]."
          "\n     Use a for loop to count how many are below freezing (< 0).")
-
-    temperatures = [30, 20, 2, -5, -15, -8, -1, 0, 5, 35]
-    below_freezing = 0
-    for temperature in temperatures:
-        if temperature < 0:
-            below_freezing += 1
-    print("  Temperatures below freezing:", below_freezing)
 
 
 # ============================================================
@@ -617,5 +603,5 @@ def s5_12():
 if __name__ == "__main__":
     print(__doc__)
     for section in (s5_1, s5_2, s5_3, s5_4, s5_5, s5_6, s5_7, s5_8,
-                    s5_9, s5_10, s5_11, s5_12):
+                    s5_9, s5_10, s5_11, s5_12, s5_13, labs):
         section()
