@@ -4,12 +4,16 @@ print("\n=== End-of-class examples ===")
 def word_counts(text):
     arr = text.split()
     uniques=[]
+    uniquesCount=[]
     for word in arr:
         if word not in uniques:
             uniques.append(word)
-    return len(uniques)
+            uniquesCount.append(1)
+        else:
+            uniquesCount[uniques.index(word)]+=1
+    return (uniques,uniquesCount,len(uniques))
 
-print(f"1. {word_counts('The cat and the hat')=}")
+print(f"1. {word_counts('The cat and the hat cat')=}")
 
 # 2. Remove duplicates but keep the original order.
 def unique(items):
