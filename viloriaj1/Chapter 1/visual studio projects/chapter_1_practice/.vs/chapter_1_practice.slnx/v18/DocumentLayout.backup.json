@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Chapter 1\\visual studio projects\\chapter_1_practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19934E58-439C-4399-8C13-A331828D8AA9}|chapter_1_practice.pyproj|C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Chapter 1\\visual studio projects\\chapter_1_practice\\chapter_1_practice.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{19934E58-439C-4399-8C13-A331828D8AA9}|chapter_1_practice.pyproj|solutionrelative:chapter_1_practice.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "chapter_1_practice.py",
+              "DocumentMoniker": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Chapter 1\\visual studio projects\\chapter_1_practice\\chapter_1_practice.py",
+              "RelativeDocumentMoniker": "chapter_1_practice.py",
+              "ToolTip": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Chapter 1\\visual studio projects\\chapter_1_practice\\chapter_1_practice.py*",
+              "RelativeToolTip": "chapter_1_practice.py*",
+              "ViewState": "AgIAALkAAAAAAAAAAAAmwOMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-09-09T21:46:24.628Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
