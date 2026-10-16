@@ -1,0 +1,3 @@
+[paths]
+train = "C:/Users/Jviloria/OneDrive - Konica Minolta/ドキュメント/MCU Python Course/Fall26_104/viloriaj1/Project/Color Agent/Data/Documents/precisecolor_eng.pdf"
+dev = "C:/Users/Jviloria/OneDrive - Konica Minolta/ドキュメント/MCU Python Course/Fall26_104/viloriaj1/Project/Color Agent/Data/Documents/precisecolor_eng.pdf" 
