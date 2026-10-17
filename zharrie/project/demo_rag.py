@@ -11,7 +11,7 @@ Retrieval-augmented generation (RAG) in three small steps:
 Ways to run it:
     python3 demo_rag.py                      # interactive questions
     python3 demo_rag.py --question "..."      # answer one question and exit
-    python3 demo_rag.py --summarize           # summarize the whole file
+   python3 demo_rag.py --summarize            # summarize the whole file
     python3 demo_rag.py --model gemma3:1b     # use a lighter model
 
 If Ollama is not running, the demo says so instead of inventing an answer.
