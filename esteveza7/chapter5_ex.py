@@ -62,6 +62,33 @@ truck.describe()
 # Ex 2  Shape has area() returning 0. Create Rectangle(w, h) and
 #       Circle(r) that OVERRIDE area(). Loop over a list of shapes and
 #       print each area (rounded to 2 decimals).
+import math
+
+class Shape:
+    def area(self):
+        return 0
+class Rectangle(Shape):
+    def __init__(self, w, h):
+        self.width = w
+        self.height = h
+    def area(self):
+        return self.width * self.height
+class Circle(Shape):
+    def __init__(self, r):
+        self.radius = r
+    def area(self):
+        return math.pi * self.radius ** 2
+
+shapes = [Shape(), Rectangle(3, 4), Circle(2)]
+
+for shape in shapes:
+    print(f"{shape.area():.2f}")
+
+#0.00
+#12.00
+#12.57
+
+
 #
 # Ex 3  Is-a or Has-a? Write "inheritance" or "composition":
 #       a) Dog / Animal   b) Library / Book   c) Manager / Employee
