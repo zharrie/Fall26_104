@@ -46,6 +46,11 @@ def count_down(count):
         print(count)
         count_down(count - 1)
 
+    # count_down(3)- 3 - count_down(2)
+        # count_down(2) - 2 - count_down(1)
+            # count_down(1) - 1 - count_down(0)
+                # count_down(0) - Go - None
+
 
 def count_up(count):
     if count == 0:
@@ -55,13 +60,15 @@ def count_up(count):
         print(count)            # ... print on the way back up
 
 
+# count_up(3) - count_up(2) - count_up(1) - count_up(0)
+
 count_down(2)
 count_up(3)
 
 """
-  Q1 How many calls does count_down(5) make?           6  (5,4,3,2,1,0)
-  Q2 How many calls does count_down(0) make?           1
-  Q3 Are recursive parameters defined differently?     No
+  Q1 How many calls does count_down(5) make?          
+  Q2 How many calls does count_down(0) make?        
+  Q3 Are recursive parameters defined differently?  
 
 COMMON MISTAKES: no base case, or a call that doesn't shrink the problem
 (count_down(count) instead of count_down(count - 1)) -> infinite recursion.
@@ -78,101 +85,42 @@ IN-CLASS EXERCISES
 
 
 # =====================================================================
-# 14.2 RECURSIVE ALGORITHM: SEARCH
+# 14.2 RECURSIVE ALGORITHMS: WORKING WITH A LIST
 # =====================================================================
 
 """
-RECURSIVE ALGORITHMS
-An algorithm is a sequence of steps that solves a problem.
-  Make lemonade (not recursive): add sugar, lemon juice, water, stir.
-  Mow the lawn (recursive):  mow front (left, right), mow back (left,
-  right) - the steps themselves are "mowing", just a smaller region.
-
-GUESSING A NUMBER FROM 0-100
-  By 1s ~50 guesses | by 10s then 1s ~10 | BINARY SEARCH ~7 at most.
-  Binary search guesses the MIDPOINT and keeps only the half that can
-  still hold the number:  find 32 -> 50 (lower), 25 (higher),
-  38 (lower), 32 found.  Same algorithm, smaller range = RECURSIVE.
-
-  find(low, high):  mid = (high + low) // 2
-      "lower"  -> find(low, mid)
-      "higher" -> find(mid + 1, high)   (mid was already checked; using
-                  mid would repeat the window 99..100 forever)
-      correct  -> BASE CASE, stop.
-
-SEARCHING A SORTED LIST (Fig 14.2.2) - two base cases:
-  item == lst[mid] -> return mid  |  range_size == 1 -> return -1 (not found)
-  Otherwise RETURN the result of searching the lower or upper half.
-  (Demo only - in practice use list.index() or the 'in' operator.)
-  Binary search only works on SORTED data; upper/lower case matters.
-
-RECURSION vs LOOPS: anything recursive can be done with loops, but
-problems that reduce to SMALLER, IDENTICAL problems are good candidates.
+Recursion can process a list one item at a time:
+  * Add one price to the total of the remaining prices.
+  * Check one name, then search the remaining names if it is not a match.
+The base case is reaching the end of the list.
 """
 
-# 14.2.1: Guessing game (computer answers for secret = 41)
-def find_guess(low, high, secret):
-    mid = (high + low) // 2
-    # answer = input(f"Is it {mid}? (l/h/y): ")
-    answer = "l" if secret < mid else "h" if secret > mid else "y"
-    print(f"Is it {mid}? (l/h/y): {answer}")
-    if (answer != "l") and (answer != "h"):     # Base case
-        print("Got it!")
-    elif answer == "l":
-        find_guess(low, mid, secret)
-    else:
-        find_guess(mid + 1, high, secret)
+def total_cost(prices, index=0):
+    if index == len(prices):            # Base case: no prices left
+        return 0
+    return prices[index] + total_cost(prices, index + 1)
 
 
-find_guess(0, 100, 41)
-
-# Fig 14.2.2: Recursively searching a sorted list
-def find(lst, item, low, high):
-    """Finds index of item in sorted lst[low..high], else -1."""
-    range_size = (high - low) + 1
-    mid = (high + low) // 2
-    if item == lst[mid]:            # Base case 1: found at mid
-        pos = mid
-    elif range_size == 1:           # Base case 2: not found
-        pos = -1
-    elif item < lst[mid]:           # Search lower half
-        pos = find(lst, item, low, mid)
-    else:                           # Search upper half
-        pos = find(lst, item, mid + 1, high)
-    return pos
+cart = [12.50, 3.25, 6.00]
+print("Cart total:", total_cost(cart))  # 12.50 + 3.25 + 6.00
 
 
-attendees = ["Adams, Mary", "Carver, Michael", "Domer, Hugo",
-             "Fredericks, Carlo", "Li, Jie"]
-for name in ["Simpson, Homer", "Domer, Hugo"]:      # input()
-    pos = find(attendees, name, 0, len(attendees) - 1)
-    print(f"{name}: " + (f"Found at position {pos}." if pos >= 0 else "Not found."))
-
-# Challenge 14.2.1: Searching for a letter
-def search(char_list, match_char, lower_index, upper_index):
-    print(f"Searching range from index {lower_index} to {upper_index}")
-    range_size = (upper_index - lower_index) + 1
-    mid_index = (lower_index + upper_index) // 2
-    mid_char = char_list[mid_index]
-    if match_char == mid_char:
-        print(f"{match_char} is found at index {mid_index}")
-    elif range_size == 1:
-        print(f"{match_char} is not in the list")
-    elif match_char < mid_char:
-        search(char_list, match_char, lower_index, mid_index)
-    else:
-        search(char_list, match_char, mid_index + 1, upper_index)
+def find_name(names, target, index=0):
+    if index == len(names):             # Base case: checked every name
+        return -1
+    if names[index] == target:
+        return index
+    return find_name(names, target, index + 1)
 
 
-letters = list("abdfgkmpstwz")
-search(letters, "p", 0, len(letters) - 1)
-search(letters, "c", 0, len(letters) - 1)
+attendees = ["Mary", "Michael", "Hugo", "Carlo"]
+position = find_name(attendees, "Hugo")
+print("Hugo's position:", position)
 
 """
 IN-CLASS EXERCISES
-  14.2-A  By hand: list every guess find_guess makes for 77.
-  14.2-B  binary_search(nums, target, low, high) for a sorted list of ints;
-          return the index or -1. Test: [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  14.2-A  Trace total_cost([4, 7]): what does each call return?
+  14.2-B  Try find_name(attendees, "Jie"). Why does it return -1?
 """
 
 
@@ -183,54 +131,47 @@ IN-CLASS EXERCISES
 
 """
 DEBUGGING WITH INDENTED PRINTS
-Recursive functions are hard to debug - print statements help, and
-INDENTING them shows the depth of recursion:
-  * add a parameter 'indent'; start every print with it
-  * the script starts with "   "; each recursive call passes indent + "   "
-  * nothing is removed before returning - each call has its OWN indent
-Tip: comment debug prints out (#) instead of deleting them. (Advanced:
-Python's 'logging' module.)
-
-TRY 14.3.1: change "pos = -1" to "pos = 0" in the not-found case and the
-output shows "Person not found." then "Returning pos = 0." -> bug found!
-(Below, the not_found parameter lets us inject that bug.)
+Prints show each call on the way down and each result on the way back up.
+An indent parameter makes the depth of each call easy to see. Each
+recursive call adds spaces; its caller keeps its own indent.
 """
 
 
-def find_debug(lst, item, low, high, indent, not_found=-1):
-    print(f"{indent}find() range {low} {high}")
-    range_size = (high - low) + 1
-    mid = (high + low) // 2
-    if item == lst[mid]:
-        print(f"{indent}Found person.")
-        pos = mid
-    elif range_size == 1:
-        print(f"{indent}Person not found.")
-        pos = not_found                     # book: pos = -1
-    elif item < lst[mid]:
-        print(f"{indent}Searching lower half.")
-        pos = find_debug(lst, item, low, mid, indent + '   ', not_found)
-    else:
-        print(f"{indent}Searching upper half.")
-        pos = find_debug(lst, item, mid + 1, high, indent + '   ', not_found)
-    print(f"{indent}Returning pos = {pos}.")
-    return pos
+def total_cost_debug(prices, index=0, indent=""):
+    print(f"{indent}total_cost at index {index}")
+    if index == len(prices):
+        print(f"{indent}No prices left; returning 0")
+        return 0
+    subtotal = prices[index] + total_cost_debug(prices, index + 1, indent + "  ")
+    print(f"{indent}Returning {subtotal}")
+    return subtotal
 
 
-# 14.3.1: search for 'Meeks, Stan'
-find_debug(attendees, "Meeks, Stan", 0, len(attendees) - 1, "   ")
-# 14.3.1: the bug (pos = 0) made visible for 'Aaron, Joe'
-find_debug(attendees, "Aaron, Joe", 0, len(attendees) - 1, "   ", not_found=0)
+print("Tracing the cart total:")
+total_cost_debug(cart)
+
+
+def find_name_debug(names, target, index=0, indent=""):
+    print(f"{indent}Checking index {index}")
+    if index == len(names):
+        print(f"{indent}Reached the end; returning -1")
+        return -1
+    if names[index] == target:
+        print(f"{indent}Found {target}; returning {index}")
+        return index
+    position = find_name_debug(names, target, index + 1, indent + "  ")
+    print(f"{indent}Returning {position}")
+    return position
+
+
+print("Tracing a name that is not in the list:")
+find_name_debug(attendees, "Jie")
 
 """
 IN-CLASS EXERCISES
-  14.3-B  This should sum a list but crashes with a TypeError. Use indented
-          prints to find the bug, then fix it.
-              def sum_list(nums):
-                  if len(nums) == 0:
-                      return 0
-                  else:
-                      nums[0] + sum_list(nums[1:])
+  14.3-A  Follow the indents in the cart trace. Which call returns first?
+  14.3-B  Add similar debug prints to find_name. Trace a found name and a
+          missing name. At what point does each call return?
 """
 
 
@@ -302,8 +243,6 @@ print_smiley(4)                   # num_smiles = int(input())
 print()
 
 # Example: find_sum
-
-
 def find_sum(in_value, total_val):
     print(in_value, end="")
     total_val += in_value
@@ -514,5 +453,3 @@ Summary
   Depth limit    : sys.getrecursionlimit() ~1000 -> RecursionError
   Explore all    : choose -> explore -> un-choose
 """
-
-
