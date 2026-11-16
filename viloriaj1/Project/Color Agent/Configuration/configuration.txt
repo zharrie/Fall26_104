@@ -1,0 +1,13 @@
+C:\Users\Jviloria\OneDrive - Konica Minolta\ドキュメント\MCU Python Course\Fall26_104\viloriaj1\Project\Color Agent\Data\Color Data\Measured Data
+
+python3 -m spacy download en_core_web_sm
+
+python3 -m spacy init config config.cfg --lang en --pipeline ner
+
+python3 -m spacy train config.cfg --output ./output_model
+
+pip install pymupdf
+
+
+
+

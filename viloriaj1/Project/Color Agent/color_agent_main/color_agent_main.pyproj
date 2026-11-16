@@ -21,7 +21,51 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ai_agent_module.py" />
     <Compile Include="color_agent_main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".color_agent_cache\" />
+    <Folder Include=".color_agent_cache\extracted_images\" />
+    <Folder Include=".color_agent_cache\ocr\" />
+    <Folder Include=".color_agent_cache\pages\" />
+    <Folder Include=".color_agent_image_cache\" />
+    <Folder Include=".vs\" />
+    <Folder Include=".vs\color_agent_main.slnx\" />
+    <Folder Include=".vs\color_agent_main.slnx\copilot-chat\" />
+    <Folder Include=".vs\color_agent_main.slnx\copilot-chat\15720f9d\" />
+    <Folder Include=".vs\color_agent_main.slnx\copilot-chat\15720f9d\sessions\" />
+    <Folder Include=".vs\color_agent_main.slnx\FileContentIndex\" />
+    <Folder Include=".vs\color_agent_main.slnx\v18\" />
+    <Folder Include=".vs\color_agent_main\" />
+    <Folder Include=".vs\color_agent_main\CopilotIndices\" />
+    <Folder Include=".vs\color_agent_main\CopilotIndices\18.11.1093.4562\" />
+    <Folder Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\" />
+    <Folder Include="_image_cache\" />
+    <Folder Include="__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".color_agent_cache\extracted_images\32dbfda2a4cb4d_p0019_xref397.jpeg" />
+    <Content Include=".color_agent_cache\extracted_images\32dbfda2a4cb4d_p0019_xref83.jpeg" />
+    <Content Include=".color_agent_cache\extracted_images\32dbfda2a4cb4d_p0056_xref319.jpeg" />
+    <Content Include=".color_agent_cache\extracted_images\32dbfda2a4cb4d_p0056_xref416.jpeg" />
+    <Content Include=".color_agent_image_cache\Color_Space__English_Poster_FINAL_p1_image.png" />
+    <Content Include=".color_agent_image_cache\IncreasingVersatility_p3_image.jpeg" />
+    <Content Include=".color_agent_image_cache\precisecolor_eng_p58_image.jpeg" />
+    <Content Include=".vs\color_agent_main.slnx\FileContentIndex\d2be2c6c-66bc-419b-ad7f-7b94912c0e4c.vsidx" />
+    <Content Include=".vs\color_agent_main.slnx\FileContentIndex\e2841ccc-34b4-44d0-aefd-996432441da4.vsidx" />
+    <Content Include=".vs\color_agent_main.slnx\v18\DocumentLayout.backup.json" />
+    <Content Include=".vs\color_agent_main.slnx\v18\DocumentLayout.json" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.11.1093.4562\SemanticSymbols.db" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\CodeChunks.db" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\CodeChunks.db-shm" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\CodeChunks.db-wal" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\SemanticSymbols.db" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\SemanticSymbols.db-shm" />
+    <Content Include=".vs\color_agent_main\CopilotIndices\18.7.1253.33689\SemanticSymbols.db-wal" />
+    <Content Include="color_agent_main.slnx" />
+    <Content Include="__pycache__\ai_agent_module.cpython-314.pyc" />
+    <Content Include="__pycache__\color_agent_main.cpython-314.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
