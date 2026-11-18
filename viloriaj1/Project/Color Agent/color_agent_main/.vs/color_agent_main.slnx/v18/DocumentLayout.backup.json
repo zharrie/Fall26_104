@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\color_agent_main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|solutionrelative:color_agent_main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\ai_agent_module.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|solutionrelative:ai_agent_module.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\color_agent_main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{83862764-BD45-4B49-9873-E001E04215B7}|color_agent_main.pyproj|solutionrelative:color_agent_main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,31 @@
       "DocumentGroups": [
         {
           "DockedHeight": 119,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ai_agent_module.py",
               "DocumentMoniker": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\ai_agent_module.py",
               "RelativeDocumentMoniker": "ai_agent_module.py",
               "ToolTip": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\ai_agent_module.py",
               "RelativeToolTip": "ai_agent_module.py",
-              "ViewState": "AgIAAFUAAAAAAAAAAADwv4QAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-11-16T22:30:13.101Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "color_agent_main.py",
               "DocumentMoniker": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\color_agent_main.py",
               "RelativeDocumentMoniker": "color_agent_main.py",
               "ToolTip": "C:\\Users\\Jviloria\\OneDrive - Konica Minolta\\\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8\\MCU Python Course\\Fall26_104\\viloriaj1\\Project\\Color Agent\\color_agent_main\\color_agent_main.py",
               "RelativeToolTip": "color_agent_main.py",
-              "ViewState": "AgIAAEAHAAAAAAAAAAAAwG0HAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8HAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2026-11-16T22:30:13.174Z",
               "IsPinned": true,
