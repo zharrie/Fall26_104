@@ -47,6 +47,11 @@ TARGETS_FOLDER = Path(
 SAMPLES_FOLDER = Path(
     r"C:\Users\Jviloria\OneDrive - Konica Minolta\ドキュメント\MCU Python Course\Fall26_104\viloriaj1\Project\Color Agent\Data\Color Data\Sample Data"
 )
+
+# ecord events, status updates, and errors into a file named color_agent.log.
+#Instead of just printing messages to the screen (which disappear when the program closes), 
+#this saves a permanent record of what your program did and when it happened.
+
 BASE_DIR = Path(__file__).resolve().parent
 LOG_FILE = BASE_DIR / "color_agent.log"
 logging.basicConfig(
